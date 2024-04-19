@@ -1,0 +1,9 @@
+services:
+  webjteneste:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes: 
+      - './html:/var/www/html'
+      - './nginx-conf:/etc/nginx/conf.d'
+    restart: always
